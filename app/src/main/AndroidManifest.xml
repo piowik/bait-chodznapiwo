@@ -26,10 +26,13 @@
         </activity>
         <activity android:name="bait.chodznapiwo.RegisterActivity"/>
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY"/>
+        <activity android:name="bait.chodznapiwo.MapTestActivity"/>
 
+
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAQjm72lKKkoNxpJL9JXIda0AeVtrAhYGs " />
     </application>
     <service
         android:name=".MyFirebaseMessagingService">
