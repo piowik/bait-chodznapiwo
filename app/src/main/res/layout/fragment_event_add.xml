@@ -6,11 +6,20 @@
     android:layout_margin="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <android.support.design.widget.TextInputEditText
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/event_name"
-        android:layout_marginBottom="@dimen/elements_vertical_margin"/>
+        android:layout_marginBottom="@dimen/elements_vertical_margin">
+
+        <EditText
+            android:id="@+id/input_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_name"
+            android:inputType="textCapWords"/>
+
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:layout_width="wrap_content"
