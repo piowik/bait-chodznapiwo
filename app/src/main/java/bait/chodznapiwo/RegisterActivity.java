@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 
 /**
  * Created by Piotrek on 25.11.2017.
@@ -20,6 +23,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mInputLogin, mInputName, mInputEmail, mInputPassword;
     private TextInputLayout mInputLayoutLogin, mInputLayoutName, mInputLayoutEmail, mInputLayoutPassword;
     private Button mRegisterButton;
+
+    private Button mFireButt;
     public RegisterActivity() {
     }
 
@@ -37,10 +42,24 @@ public class RegisterActivity extends AppCompatActivity {
         mInputLogin = (EditText) findViewById(R.id.input_login);
         mInputEmail = (EditText) findViewById(R.id.input_email);
         mInputPassword = (EditText) findViewById(R.id.input_password);
+
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+
+        mFireButt = (Button) findViewById(R.id.button2);
+        mFireButt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Get token
+                String token = FirebaseInstanceId.getInstance().getToken();
+
+                // Log and toast
+                Log.d(TAG, "Token: " + token);
+                Toast.makeText(RegisterActivity.this, token, Toast.LENGTH_SHORT).show();
             }
         });
     }
