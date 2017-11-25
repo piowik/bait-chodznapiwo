@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        FindEventFragment fragment = new FindEventFragment();
+        displayFragment(fragment);
+
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -73,10 +77,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        /*if (id == R.id.find_event) {
+        if (id == R.id.find_event) {
             FindEventFragment fragment = new FindEventFragment();
             displayFragment(fragment);
-        } else */if (id == R.id.add_event) {
+        } else if (id == R.id.add_event) {
             AddEventFragment fragment = new AddEventFragment();
             displayFragment(fragment);
         } /*else if (id == R.id.settings) {
