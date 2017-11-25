@@ -26,6 +26,7 @@ import java.util.Map;
 
 import bait.chodznapiwo.app.AppController;
 import bait.chodznapiwo.app.Networking;
+import bait.chodznapiwo.model.User;
 
 /**
  * Created by Piotrek on 25.11.2017.
@@ -40,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button mRegisterButton;
 
     private Button mFireButt;
+
     public RegisterActivity() {
     }
 
@@ -115,16 +117,20 @@ public class RegisterActivity extends AppCompatActivity {
                     JSONObject obj = new JSONObject(response);
 
                     if (!obj.getBoolean("error")) {
-//                        JSONObject userObj = obj.getJSONObject("user");
+                        JSONObject userObj = obj.getJSONObject("user");
 
-  //                              userObj.getString("name"),
-
+                        User loggedUser = new User(Integer.parseInt(userObj.getString("id")),
+                                userObj.getString("name"),
+                                userObj.getString("user"),
+                                userObj.getString("email"),
+                                userObj.getString("token"));
+                        AppController.getInstance().getPrefManager().storeUser(loggedUser);
                         Toast.makeText(RegisterActivity.this, "Success!", Toast.LENGTH_SHORT).show();
                         finish();
                     } else {
                         if (obj.getInt("error_code") == 2) {
                             mInputLayoutName.setError("User already exists");
-                            requestFocus(mInputLayoutName);
+                            requestFocus(mInputLayoutLogin);
                         } else
                             Toast.makeText(getApplicationContext(), "" + obj.getString("message"), Toast.LENGTH_LONG).show();
                     }
@@ -160,12 +166,9 @@ public class RegisterActivity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq);
     }
 
-
     private static boolean isValidEmail(String email) {
         return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
-
-
 
     private void requestFocus(View view) {
         if (view.requestFocus()) {
