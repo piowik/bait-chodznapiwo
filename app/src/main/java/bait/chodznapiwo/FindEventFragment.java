@@ -18,7 +18,7 @@ public class FindEventFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_event_add, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_event_find, container, false);
         // Inflate the layout for this fragment
         return rootView;
     }
