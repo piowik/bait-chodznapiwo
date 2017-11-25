@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.add_event) {
             AddEventFragment fragment = new AddEventFragment();
             displayFragment(fragment);
-        } /*else if (id == R.id.settings) {
-            SettingsFragment fragment = new SettingsFragment();
+        } else if (id == R.id.help_us) {
+            HelpUsFragment fragment = new HelpUsFragment();
             displayFragment(fragment);
-        }*/
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
