@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity
             HelpUsFragment fragment = new HelpUsFragment();
             displayFragment(fragment);
         } else if (id == R.id.maps) {
-            SupportMapFragment fragment = new SupportMapFragment();
+            MapTestFragment fragment = new MapTestFragment();
             displayFragment(fragment);
         }
 
