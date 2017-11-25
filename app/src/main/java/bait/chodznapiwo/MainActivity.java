@@ -21,6 +21,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import bait.chodznapiwo.app.AppController;
+import bait.chodznapiwo.model.User;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -30,8 +33,15 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         //View header = navigationView.getHeaderView(0);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View header = navigationView.getHeaderView(0);
+        User user = AppController.getInstance().getPrefManager().getUser();
+        Log.d("Logged as", user.getName() + ":" + user.getEmail());
+        TextView textViewUserName = (TextView) header.findViewById(R.id.textViewHeaderLogin);
+        textViewUserName.setText(user.getName());
+        TextView textViewMail = (TextView) header.findViewById(R.id.textViewHeaderMail);
+        textViewMail.setText(user.getEmail());
 
         FindEventFragment fragment = new FindEventFragment();
         displayFragment(fragment);

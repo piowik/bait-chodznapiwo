@@ -37,9 +37,9 @@ public class SharedPrefsManager {
     public void storeUser(User user) {
         mEditor.putInt(KEY_USER_ID, user.getId());
         mEditor.putString(KEY_USER_NAME, user.getName());
-        mEditor.putString(KEY_USER_LOGIN, user.getName());
-        mEditor.putString(KEY_USER_EMAIL, user.getName());
-        mEditor.putString(KEY_USER_TOKEN, user.getName());
+        mEditor.putString(KEY_USER_LOGIN, user.getLogin());
+        mEditor.putString(KEY_USER_EMAIL, user.getEmail());
+        mEditor.putString(KEY_USER_TOKEN, user.getToken());
         mEditor.commit();
         Log.e(TAG, "User is stored in shared preferences. " + user.getName() + ", " + user.getEmail());
     }

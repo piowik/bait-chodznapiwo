@@ -15,6 +15,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -131,6 +132,7 @@ public class LoginActivity extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
                 params.put("name", name);
                 params.put("password", password);
+                params.put("token", FirebaseInstanceId.getInstance().getToken());
                 Log.e(TAG, "params: " + params.toString());
                 return params;
             }
