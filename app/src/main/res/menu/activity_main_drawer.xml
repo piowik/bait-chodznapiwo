@@ -14,6 +14,10 @@
             android:id="@+id/help_us"
             android:icon="@drawable/ic_menu_send"
             android:title="@string/help_us" />
+        <item
+            android:id="@+id/maps"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/maps" />
     </group>
     <!--
     <item android:title="Communicate">

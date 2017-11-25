@@ -21,6 +21,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.SupportMapFragment;
+
 import bait.chodznapiwo.app.AppController;
 import bait.chodznapiwo.model.User;
 
@@ -105,6 +107,9 @@ public class MainActivity extends AppCompatActivity
             displayFragment(fragment);
         } else if (id == R.id.help_us) {
             HelpUsFragment fragment = new HelpUsFragment();
+            displayFragment(fragment);
+        } else if (id == R.id.maps) {
+            SupportMapFragment fragment = new SupportMapFragment();
             displayFragment(fragment);
         }
 
