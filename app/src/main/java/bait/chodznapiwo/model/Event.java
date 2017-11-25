@@ -22,4 +22,28 @@ public class Event {
         this.mEvent_type_id = mEvent_type_id;
         this.mDescription = mDescription;
     }
+
+    public String getName() {
+        return mName;
+    }
+
+    public Timestamp getDate() {
+        return mDate;
+    }
+
+    public String getPlace() {
+        return mPlace;
+    }
+
+    public String getCoords() {
+        return mCoords;
+    }
+
+    public int getEvent_type_id() {
+        return mEvent_type_id;
+    }
+
+    public String getDescription() {
+        return mDescription;
+    }
 }
