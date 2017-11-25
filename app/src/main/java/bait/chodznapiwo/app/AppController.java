@@ -5,10 +5,7 @@ import android.text.TextUtils;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
-
-import java.util.ArrayList;
 
 /**
  * Created by Piotrek on 25.11.2017.
@@ -22,10 +19,10 @@ public class AppController extends Application {
     private static AppController mInstance;
     private SharedPrefsManager mPrefManager;
 
-
     public static synchronized AppController getInstance() {
         return mInstance;
     }
+
     @Override
     public void onCreate() {
         super.onCreate();
