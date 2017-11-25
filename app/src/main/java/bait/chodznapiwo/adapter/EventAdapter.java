@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import bait.chodznapiwo.R;
+import bait.chodznapiwo.app.AppController;
 import bait.chodznapiwo.model.Event;
+import bait.chodznapiwo.model.User;
 
 /**
  * Created by Mateusz on 25.11.2017.
@@ -54,6 +56,7 @@ public class EventAdapter extends BaseAdapter {
         TextView titleTextView =convertView.findViewById(R.id.event_name);
 
         titleTextView.setText(it.getName());
+
 
         TextView dateTextView = convertView.findViewById(R.id.event_date);
         dateTextView.setText(it.getDate().toString());

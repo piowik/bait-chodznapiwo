@@ -9,6 +9,7 @@
     <string name="add_event">Dodaj wydarzenie</string>
     <string name="help_us">Wspomóż twórców</string>
     <string name="settings">Ustawienia</string>
+    <string name="user">AppController.getInstance().getPrefManager().getUser().getName;</string>
 
     <string name="event_name">Nazwa wydarzenia</string>
     <string name="event_size_1">Jedna osoba</string>
