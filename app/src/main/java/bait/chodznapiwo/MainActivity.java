@@ -1,5 +1,6 @@
 package bait.chodznapiwo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Debug;
 import android.support.design.widget.FloatingActionButton;
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
     }
 
     @Override
