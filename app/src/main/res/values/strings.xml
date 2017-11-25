@@ -26,4 +26,14 @@
 
     <string name="event_date">Data</string>
     <string name="event_list">Aktualne wydarzenia</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_details">Nazwa wydarzenia</string>
+    <string name="off">Dołącz</string>
+    <string name="on">Bierzesz udział</string>
+    <string name="event_details_name_text">Nazwa</string >
+    <string name="event_details_date_text">Data</string> />
+    <string name="event_details_type_text">Ile osób</string>
+    <string name="event_details_description_text">Opis</string>
 </resources>

@@ -21,8 +21,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.google.android.gms.maps.SupportMapFragment;
-
 import bait.chodznapiwo.app.AppController;
 import bait.chodznapiwo.model.User;
 
