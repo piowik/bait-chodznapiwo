@@ -34,5 +34,5 @@
     <string name="event_details_name_text">Nazwa</string >
     <string name="event_details_date_text">Data</string> />
     <string name="event_details_type_text">Ile osób</string>
-    <string name="event_details_description">Opis</string>
+    <string name="event_details_description_text">Opis</string>
 </resources>

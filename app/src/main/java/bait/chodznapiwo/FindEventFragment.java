@@ -48,7 +48,7 @@ public class FindEventFragment extends Fragment {
         mEventList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("test", "Item ID: " + i);
+                //Log.d("test", "Item ID: " + i);
                 AppController.getInstance().setActualEvent(tmp.get(i));
                 FragmentTransaction fragmentTransaction = (getActivity().getSupportFragmentManager().beginTransaction());
                 fragmentTransaction.replace(R.id.fragmentContainer, new EventDetailsFragment());
