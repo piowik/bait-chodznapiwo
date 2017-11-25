@@ -5,7 +5,18 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="find_event">Zanajdz kompana</string>
-    <string name="add_event">Dodaj kompana</string>
+    <string name="find_event">Znajdź wydarzenie</string>
+    <string name="add_event">Dodaj wydarzenie</string>
     <string name="settings">Ustawienia</string>
+
+    <string name="event_name">Nazwa wydarzenia</string>
+    <string name="event_size_1">Jedna osoba</string>
+    <string name="event_size_small">Małe (1-5 osób)</string>
+    <string name="event_size_medium">Średnie (6-15 osób)</string>
+    <string name="event_size_large">Melanż (ponad 15 osób)</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+
+    <string name="pick_time">Wybierz czas</string>
 </resources>

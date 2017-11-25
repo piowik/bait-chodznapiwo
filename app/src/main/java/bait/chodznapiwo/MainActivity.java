@@ -1,5 +1,7 @@
 package bait.chodznapiwo;
 
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.os.Debug;
 import android.support.design.widget.FloatingActionButton;
@@ -104,5 +106,11 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragmentContainer, fragment);
         fragmentTransaction.commit();
+    }
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+        newFragment.show(fragmentManager, "timePicker");
     }
 }
