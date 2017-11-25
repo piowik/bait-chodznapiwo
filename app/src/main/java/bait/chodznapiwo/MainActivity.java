@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+//        startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
     }
 
     @Override
