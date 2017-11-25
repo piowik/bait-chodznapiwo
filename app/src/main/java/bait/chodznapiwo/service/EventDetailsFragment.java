@@ -51,6 +51,9 @@ public class EventDetailsFragment extends Fragment {
             TextView peopleTextView = rootView.findViewById(R.id.event_details_type);
             peopleTextView.setText("Melanz");
 
+        }else if(mEvent.getEvent_type_id()==0) {
+            TextView peopleTextView = rootView.findViewById(R.id.event_details_type);
+            peopleTextView.setText("Jednoosobowe");
         }
 
         TextView descripteTextView = rootView.findViewById(R.id.event_details_description);
