@@ -5,9 +5,16 @@
     tools:context=".MainActivity">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Event find" />
+        android:orientation="vertical">
 
+        <ListView
+            android:id="@+id/event_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:title="@string/event_list"/>
+    </LinearLayout>
 </FrameLayout>

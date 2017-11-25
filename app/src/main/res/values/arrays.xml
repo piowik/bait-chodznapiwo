@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="event_size_list">
+        <item>@string/event_size_1</item>
+        <item>@string/event_size_small</item>
+        <item>@string/event_size_medium</item>
+        <item>@string/event_size_large</item>
+    </string-array>
+</resources>
