@@ -10,6 +10,8 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.ArrayList;
 
+import bait.chodznapiwo.model.Event;
+
 /**
  * Created by Piotrek on 25.11.2017.
  */
@@ -21,6 +23,16 @@ public class AppController extends Application {
             .getSimpleName();
     private static AppController mInstance;
     private SharedPrefsManager mPrefManager;
+
+    public Event getActualEvent() {
+        return mActualEvent;
+    }
+
+    public void setActualEvent(Event actualEvent) {
+        mActualEvent = actualEvent;
+    }
+
+    private Event mActualEvent;
 
 
     public static synchronized AppController getInstance() {

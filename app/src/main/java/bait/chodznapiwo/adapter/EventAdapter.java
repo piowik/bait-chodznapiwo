@@ -2,6 +2,7 @@ package bait.chodznapiwo.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import bait.chodznapiwo.R;
 import bait.chodznapiwo.model.Event;
+import bait.chodznapiwo.service.EventDetailsFragment;
 
 /**
  * Created by Mateusz on 25.11.2017.
@@ -43,6 +45,9 @@ public class EventAdapter extends BaseAdapter {
         return position;
     }
 
+
+
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         if (inflater == null)
@@ -57,7 +62,9 @@ public class EventAdapter extends BaseAdapter {
 
         TextView dateTextView = convertView.findViewById(R.id.event_date);
         dateTextView.setText(it.getDate().toString());
+
         return convertView;
+
     }
 
 }
