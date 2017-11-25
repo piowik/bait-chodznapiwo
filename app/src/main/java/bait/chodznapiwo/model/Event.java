@@ -22,7 +22,6 @@ public class Event {
         this.mEvent_type_id = mEvent_type_id;
         this.mDescription = mDescription;
     }
-
     public String getName() {
         return mName;
     }
